@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Toyland</title>
+<style>
+body{
+  font-family:Arial;
+  margin:0;
+  background:#fff5f5;
+  text-align:center;
+}
+nav{
+  background:#aa8fa0;
+  color:rgb(15, 15, 13);
+  padding:15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+.cart-btn{
+ position:absolute;
+right:20px;
+}
+.container{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:30px;
+  flex-wrap:wrap;
+}
+.card{
+  background:white;
+  padding:20px;
+  width:180px;
+  border-radius:10px;
+  box-shadow:0 0 10px #ccc;
+}
+button{
+  background:#ff4d6d;
+  color:white;
+  border:none;
+  padding:8px 15px;
+  border-radius:5px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+<nav>
+  <h1>🧸WonderToy</h1>
+ <button class="cart-btn" onclick="toggleCart()">
+  🛒 Cart (<span id="cnt">0</span>)
+</button>
+</nav>
+
+
+<h1>Made with ❤️ for little ones</h1>
+<div class="hero">
+  <p><b>Safe, colorful toys for all ages. Free delivery on orders over ₹499.</b></p>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <h1>🐻</h1>
+    <h3>Teddy Bear</h3>
+    <button>Buy</button>
+  </div>
+
+  <div class="card">
+    <h1>🚂</h1>
+    <h3>Train Set</h3>
+    <button>Buy</button>
+  </div>
+
+  <div class="card">
+    <h1>🤖</h1>
+    <h3>Robot Toy</h3>
+    <button>Buy</button>
+  </div>
+
+  <div class="card">
+    <h1>🏎️</h1>
+    <h3> Rc Car</h3>
+    <button>Buy</button>
+  </div>
+
+  <div class="card">
+    <h1>🏕️ </h1>
+    <h3> Out Door </h3>
+    <button>Buy</button>
+  </div>
+
+  <div class="card">
+    <h1> 🧩</h1>
+    <h3> Puzzel </h3>
+    <button>Buy</button>
+  </div>
+
+  <div class="card">
+    <h1>🎨 </h1>
+    <h3> Creative </h3>
+    <button>Buy</button>
+  </div>
+
+   <div class="card">
+    <h1>🦸</h1>
+    <h3> Action</h3>
+    <button>Buy</button>
+  </div> 
+</div>
+
+</body>
+</html>
