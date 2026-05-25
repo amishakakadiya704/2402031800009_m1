@@ -1,0 +1,16 @@
+
+import Hello from "./Hello"
+
+
+function App() {
+  const hobbies = ["Reading", "Coding","traveling"]
+
+  return (
+    <>
+    <Hello name ="YahuBaba" age={20} city="ahemdabad" hobbies={hobbies} />
+    {/* <Hello /> */}
+    </>
+  )
+}
+
+export default App
