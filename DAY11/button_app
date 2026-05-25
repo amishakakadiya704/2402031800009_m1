@@ -1,0 +1,21 @@
+
+import Hello from "./Hello"
+import Button from "./Button"
+
+function App() {
+  const hobbies = ["Reading", "Coding","traveling"]
+
+  function message(){
+    alert("Hello from message Box")
+  }
+
+  return (
+    <>
+    <Hello name ="YahuBaba" age={20} city="ahemdabad" hobbies={hobbies} />
+    <Button label="Click Me" handleClick={message} />
+    {/* <Hello /> */}
+    </>
+  )
+}
+
+export default App
