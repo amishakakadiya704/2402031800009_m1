@@ -6,7 +6,8 @@ function App() {
 
   return (
     <>
-    <Hello name ="YahuBaba" />
+    <Hello name ="YahuBaba" age={20} city="ahemdabad" />
+    
     </>
   )
 }
