@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sceipt</title>
+</head>
+<body>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quos voluptas officia praesentium perferendis natus iusto. Ea, cum iste. Porro dignissimos praesentium enim maxime quidem hic modi ad nemo eaque.</p>
+    <button type="submit" id="Hide">Hide</button>
+    <button type="submit" id="Show">Show</button>
+    <button type="submit" id="Toggle">Toggle</button>
+    <button type="submit" id="FadeIn">Fade In</button>
+    <button type="submit" id="FadeOut">Fade Out</button>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $("#Hide").click(function() {
+                $("#p1").hide();
+            });
+
+            $("#Show").click(function() {
+                $("#p1").show();
+            });
+            
+            $("#Toggle").click(function() {
+                $("#p1").toggle(3000);
+            });
+            $("#FadeIn").click(function() {
+                $("#p1").fadeIn(1000);
+            });
+            $("#FadeOut").click(function() {
+                $("#p1").fadeOut(1000);
+            });
+        });
+    
+
+        
+    </script>
+</body> 
+</html>
