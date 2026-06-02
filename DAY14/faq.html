@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        h2{
+            text-align:center;
+        }
+
+        .faq-item{
+            width:500px;
+            margin:10px auto;
+            border:1px solid;
+            padding:10px;
+            background:pink;
+        }
+
+        .question{
+            display:flex;
+            justify-content:space-between;
+            cursor:pointer;
+            font-weight:bold;
+            color:blue;
+            
+        }
+
+        .answer{
+            display:none;
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Aptitude Test</h2>
+
+<div class="faq-item">
+    <div class="question">
+        <span>986*137+96*863</span>
+        <span class="btn">+</span>
+    </div>
+
+    <div class="answer">
+        986000
+        
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="question">
+        <span>Sum of nth term</span>
+        <span class="btn">+</span>
+    </div>
+
+    <div class="answer">
+        an=a+(n-1)d
+    </div>
+</div>
+<div class="faq-item">
+    <div class="question">
+        <span>8,6,9,23,87,? what should come next</span>
+        <span class="btn">+</span>
+    </div>
+
+    <div class="answer">
+        429
+    </div>
+</div>
+<div class="faq-item">
+    <div class="question">
+        <span>6202.5+620.25+62.025+6.2025+0.62025</span>
+        <span class="btn">+</span>
+    </div>
+
+    <div class="answer">
+        6891.59775
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+
+    $(".question").click(function(){
+
+        $(this).next(".answer").slideToggle();
+
+        let btn = $(this).find(".btn");
+
+        if(btn.text() == "+"){
+            btn.text("-");
+        }
+        else{
+            btn.text("+");
+        }
+
+    });
+
+});
+</script>
+
+</body>
+</html>
