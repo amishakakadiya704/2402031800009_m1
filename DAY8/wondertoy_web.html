@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Toyland</title>
+<title>WonderToy</title>
+
 <style>
-body{
-  font-family:Arial;
+*{
   margin:0;
-  background:#fff5f5;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  background:pink;
   text-align:center;
 }
+
+/* Navbar */
 nav{
-  background:#aa8fa0;
-  color:rgb(15, 15, 13);
+  background:pink;
+  color:#111;
   padding:15px;
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
   position:relative;
 }
+
 .cart-btn{
- position:absolute;
-right:20px;
+  position:absolute;
+  right:20px;
+  background:#ff4d6d;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  border-radius:5px;
+  cursor:pointer;
 }
+
+/* Hero */
+.hero{
+  margin:15px 0;
+}
+
+/* Product Section */
 .container{
   display:flex;
   justify-content:center;
@@ -29,14 +51,29 @@ right:20px;
   padding:30px;
   flex-wrap:wrap;
 }
+
 .card{
   background:white;
   padding:20px;
   width:180px;
   border-radius:10px;
   box-shadow:0 0 10px #ccc;
+  transition:0.3s;
 }
-button{
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card h1{
+  font-size:50px;
+}
+
+.card h3{
+  margin:10px 0;
+}
+
+.card button{
   background:#ff4d6d;
   color:white;
   border:none;
@@ -44,23 +81,127 @@ button{
   border-radius:5px;
   cursor:pointer;
 }
+
+/* Footer */
+.footer{
+  background:pink;
+  padding:60px 50px;
+  margin-top:40px;
+}
+
+.footer-container{
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr 1.5fr;
+  gap:50px;
+  text-align:left;
+}
+
+.brand{
+  color:#2b7c82;
+  font-size:42px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.about p{
+  line-height:1.8;
+}
+
+.social{
+  margin-top:20px;
+}
+
+.social span{
+  font-size:24px;
+  margin-right:15px;
+  cursor:pointer;
+}
+
+.footer h3{
+  color:#2b7c82;
+  margin-bottom:20px;
+  text-transform:uppercase;
+}
+
+.footer ul{
+  list-style:none;
+}
+
+.footer ul li{
+  margin-bottom:12px;
+}
+
+.footer ul li a{
+  text-decoration:none;
+  color:black;
+}
+
+.newsletter p{
+  margin-bottom:15px;
+}
+
+.newsletter input{
+  width:100%;
+  padding:12px;
+  border:1px solid #2b7c82;
+  margin-bottom:15px;
+}
+
+.newsletter button{
+  background:#2b7c82;
+  color:white;
+  border:none;
+  padding:12px;
+  width:220px;
+  cursor:pointer;
+  letter-spacing:2px;
+}
+
+.bottom-bar{
+  background:#2b7c82;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+
+.bottom-bar a{
+  color:white;
+  text-decoration:none;
+}
+
+@media(max-width:900px){
+  .footer-container{
+    grid-template-columns:1fr;
+  }
+
+  .newsletter button{
+    width:100%;
+  }
+}
 </style>
 </head>
 
 <body>
+
+<!-- Navbar -->
 <nav>
-  <h1>🧸WonderToy</h1>
- <button class="cart-btn" onclick="toggleCart()">
-  🛒 Cart (<span id="cnt">0</span>)
-</button>
+  <h1>🧸 WonderToy</h1>
+
+  <button class="cart-btn">
+    🛒 Cart (<span id="cnt">0</span>)
+  </button>
 </nav>
 
+<!-- Hero Section -->
+<h1 style="margin-top:20px;">Made with ❤️ for little ones</h1>
 
-<h1>Made with ❤️ for little ones</h1>
 <div class="hero">
-  <p><b>Safe, colorful toys for all ages. Free delivery on orders over ₹499.</b></p>
+  <p>
+    <b>Safe, colorful toys for all ages. Free delivery on orders over ₹499.</b>
+  </p>
 </div>
 
+<!-- Products -->
 <div class="container">
 
   <div class="card">
@@ -83,34 +224,105 @@ button{
 
   <div class="card">
     <h1>🏎️</h1>
-    <h3> Rc Car</h3>
+    <h3>RC Car</h3>
+    <button>Buy</button>
+  </div><br>
+
+  <div class="card">
+    <h1>🏕️</h1>
+    <h3>Outdoor Toys</h3>
     <button>Buy</button>
   </div>
 
   <div class="card">
-    <h1>🏕️ </h1>
-    <h3> Out Door </h3>
+    <h1>🧩</h1>
+    <h3>Puzzle</h3>
     <button>Buy</button>
   </div>
 
   <div class="card">
-    <h1> 🧩</h1>
-    <h3> Puzzel </h3>
+    <h1>🎨</h1>
+    <h3>Creative Kit</h3>
     <button>Buy</button>
   </div>
 
   <div class="card">
-    <h1>🎨 </h1>
-    <h3> Creative </h3>
-    <button>Buy</button>
-  </div>
-
-   <div class="card">
     <h1>🦸</h1>
-    <h3> Action</h3>
+    <h3>Action Figure</h3>
     <button>Buy</button>
-  </div> 
+  </div>
+
 </div>
+
+<!-- Footer -->
+<footer>
+
+<div class="footer">
+
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="about">
+      <div class="brand">WonderToy</div>
+
+      <p>
+        WonderToy makes
+        <strong>Cute and safe Toys</strong>
+        for everyday.
+      </p>
+
+      <div class="social">
+        <span>📷</span>
+        <span>📌</span>
+        <span>▶️</span>
+      </div>
+    </div>
+
+    <!-- Information -->
+    <div><b>
+      <h3>Information</h3>
+      <ul>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Corporate Order</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Wash Care</a></li>
+      </ul></b>
+    </div>
+
+    <!-- Policies -->
+    <div><b>
+      <h3>Our Policies</h3>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Return & Refund Policy</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul></b>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <h3>Be In The Know</h3>
+
+      <p><b>Join Our Community!</p></b>
+
+      <input type="email" placeholder="Your email">
+
+      <button>SUBSCRIBE</button>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="bottom-bar">
+  © | All Rights Reserved.
+  Made With ❤️ by Actoscript |
+  <a href="#">A Right Click</a>
+</div>
+
+</footer>
 
 </body>
 </html>
