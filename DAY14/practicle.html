@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Hide Show</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $("#hideBtn").click(function() {
+                $("#text").hide();
+            });
+
+            $("#showBtn").click(function() {
+                $("#text").show();
+            });
+            
+            $("#toggleBtn").click(function() {
+                $("#text").toggle();
+        });
+    });
+
+        
+    </script>
+</head>
+<body>
+
+    <p id="text">Hello Amisha!</p>
+    <p>Hello Niyati</p>
+
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">Show</button>
+    <button id="toggleBtn">Toggle Text</button>
+
+</body>
+</html>
