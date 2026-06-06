@@ -1,0 +1,284 @@
+/* Global Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Color Palette */
+
+:root {
+    --primary-dark: #3E2723;
+    --primary-light: #D7CCC8;
+    --accent: #8D6E63;
+    --text-light: #F5F5F5;
+    --background: #EFEBE9;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--primary-dark);
+}
+
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-dark);
+    padding: 1rem 2rem;
+    color: var(--text-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+
+/* Hamburger Menu (Mobile) */
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--text-light);
+    transition: all 0.3s ease;
+}
+
+
+/* Hero Section */
+
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(62, 39, 35, 0.7), rgba(62, 39, 35, 0.7)), url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    padding: 0 20px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 10px 25px;
+    background-color: var(--accent);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+
+/* Menu Section */
+
+.menu-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.menu-section h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.menu-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+
+/* Image specific styling */
+
+.menu-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.price {
+    display: block;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+
+/* Footer */
+
+footer {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    padding: 4rem 2rem 2rem 2rem;
+    /* Extra padding on top for breathing room */
+    border-top: 5px solid var(--accent);
+    /* A nice accent line at the top of the footer */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    /* Spreads the 3 columns evenly */
+    flex-wrap: wrap;
+    /* Allows columns to stack on small screens */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    /* Space between text lines */
+    min-width: 250px;
+}
+
+.footer-section h4 {
+    color: var(--accent);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.footer-section p {
+    font-size: 0.95rem;
+    color: #d7ccc8;
+    /* Slightly dimmed text for a softer look */
+}
+
+
+/* Instagram Link Styling */
+
+.social-link {
+    display: inline-block;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+.social-link:hover {
+    background-color: var(--accent);
+    color: var(--primary-dark);
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    /* Little jump effect on hover */
+}
+
+
+/* Mobile Responsiveness */
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        flex-direction: column;
+        background-color: var(--primary-dark);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-links.active {
+        left: 0;
+    }
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+}
